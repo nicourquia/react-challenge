@@ -41,6 +41,7 @@ const SearchPost = function () {
 
   return (
     <div>
+      <h2>Posts</h2>
       <input
         value={search}
         onChange={searcher}
@@ -51,18 +52,18 @@ const SearchPost = function () {
       <table className="table table-striped table-hover mt-5 shadow-lg">
         <thead>
           <tr key="posts.id">
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
+            <th>User ID</th>
+            <th>Post ID</th>
+            <th>Title</th>
             <th>Body</th>
           </tr>
         </thead>
         <tbody>
           {results.map((item) => (
             <tr>
+              <td>{item.userId}</td>
               <td>{item.id}</td>
-              <td></td>
-              <td></td>
+              <td>{item.title}</td>
               <td>{item.body}</td>
             </tr>
           ))}
